@@ -1,0 +1,317 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<title>PhoneGap</title>
+
+<link rel="stylesheet" href="jquery.mobile-1.1.0.css"/>
+<style type="text/css">
+html {
+	height: 100%
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+#map_canvas {
+	height: 100%
+}
+.big { height: 30px; 
+}
+.big .ui-btn-inner { 
+	padding-top:20px;
+
+ }
+	.ui-header .ui-btn-icon-left .ui-icon,  .ui-icon{
+ 	left:15px;
+ }
+</style>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/cordova-2.1.0.js"></script>
+<script type="text/javascript"
+	src="http://api.maps.nokia.com/2.2.1/jsl.js?with=all"></script>
+
+<script type="text/javascript" src="js/pbros.js">
+</script>	
+<script type="text/javascript" src="js/email.js">
+</script>	
+</head>
+<body>
+	<!--Main Page Start -->
+	<div data-role="page" id="mainPage" data-theme="e">
+		<div data-role="header">
+			<img border="0" src="images/ic_launcher-web.png" alt="Logo, Facebook" style="float:left;display:inline" width="75px" height="75px"/>
+			<h1>Patel Brothers</h1>
+			<a href="#settings" id="btn_setting" data-theme="a" data-icon="mysetting" class="ui-btn-right big"></a>
+		</div>
+		<div data-role="content" id="mainPageContent">
+			
+			<table>
+				<tr>
+					<td>
+						<p>
+							<strong>
+								<div style="font-size:18px;">Welcome to Patel brothers Pinvelle NC</div>
+							</strong>
+						</p>
+						<p>At Patel Brothers, our mission is to bring the best ingredients from around the 	
+							world, right to your doorstep. With a wide variety of authentic regional ingredients, we strive to reconnect people with the familiar flavor of India.
+						</p>
+					</td>
+				</tr>
+				
+				
+				<tr>
+					<td><img src="images/patelbros-logo.jpg"/></td>
+				</tr>
+				<tr>
+					<td><b>Address:</b> 10701 Centrum Parkway,Pineville,NC 28134<br/>
+						<b>Phone:</b> <a href="tel:7045402013">704.540.2013</a>
+					</td>
+				</tr>	
+			</table>
+								  
+		</div> 
+		
+		<div data-role="footer" data-id="footerId" data-position="fixed" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" id="btn_home" data-theme="a" data-role="button" data-transition="flip" data-icon="myhome" >Home</a></li>
+					<li><a href="#mapLocPage" id="btn_loc_id" data-theme="a" data-role="button" data-transition="flip" data-icon="navigation">Location</a></li>
+					<li><a href="#offerPage" id="btn_offer_id" data-theme="a" data-role="button" data-transition="flip" data-icon="offer">Offer</a></li>
+					<li><a href="#feedbackPage" id="btn_feedback_id" data-theme="a" data-role="button" data-transition="flip" data-icon="feedback">Feedback</a></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	
+	<!--Main Page End -->
+	
+	<!-- Map PAge Start -->
+	<div data-role="page" id="mapLocPage" data-theme="e">
+		<div data-role="header">
+			<img border="0" src="images/ic_launcher-web.png" alt="Logo, Facebook" style="float:left;display:inline" width="50px" height="50px"/>
+			<h1>Patel Brothers</h1>
+			<a href="#settings" id="btn_setting" data-theme="a" data-icon="mysetting" class="ui-btn-right big"></a>
+		</div>
+		<div data-role="content" id="mapLocPageContent">
+			<div id="map_canvas_2" style="width: 300px; height: 450px;"></div>	
+		</div>
+				<div data-role="footer" data-id="footerId" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" id="btn_home" data-theme="a" data-role="button" data-transition="flip" data-icon="myhome" >Home</a></li>
+					<li><a href="#mapLocPage" id="btn_loc_id" data-theme="a" data-role="button" data-transition="flip" data-icon="navigation">Location</a></li>
+					<li><a href="#offerPage" id="btn_offer_id" data-theme="a" data-role="button" data-transition="flip" data-icon="offer">Offer</a></li>
+					<li><a href="#feedbackPage" id="btn_feedback_id" data-theme="a" data-role="button" data-transition="flip" data-icon="feedback">Feedback</a></li>
+				</ul>
+			</div>
+		</div>	
+
+	</div>
+	<!-- Map Page End -->
+
+	<!-- Offer Page Start -->
+	<div data-role="page" id="offerPage" data-theme="e">
+		<div data-role="header">
+			<img border="0" src="images/ic_launcher-web.png" alt="Logo, Facebook" style="float:left;display:inline" width="50px" height="50px"/>
+			<h1>Patel Brothers</h1>
+			<a href="#settings" id="btn_setting" data-theme="a" data-icon="mysetting" class="ui-btn-right big"></a>
+		</div>
+		<div data-role="content" id="offerPageContent">
+			<div class="splash">
+				<img id="offerId" width="300"  height="389" src="https://dl.dropbox.com/s/5w58kqu862aq0ej/offer.jpg" > 
+				
+			</div>
+		</div>
+				<div data-role="footer" data-id="footerId" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" id="btn_home" data-theme="a" data-role="button" data-transition="flip" data-icon="myhome" >Home</a></li>
+					<li><a href="#mapLocPage" id="btn_loc_id" data-theme="a" data-role="button" data-transition="flip" data-icon="navigation">Location</a></li>
+					<li><a href="#offerPage" id="btn_offer_id" data-theme="a" data-role="button" data-transition="flip" data-icon="offer">Offer</a></li>
+					<li><a href="#feedbackPage" id="btn_feedback_id" data-theme="a" data-role="button" data-transition="flip" data-icon="feedback">Feedback</a></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	<!-- Offer Page End -->
+
+<!-- About Us page Start -->
+
+<div data-role="page" id="aboutUsPage" data-theme="e">
+		<div data-role="header">
+			<img border="0" src="images/ic_launcher-web.png" alt="Logo, Facebook" style="float:left;display:inline" width="50px" height="50px"/>
+			<h1>Patel Brothers</h1>
+			<a href="#settings" id="btn_setting" data-theme="a" data-icon="mysetting" class="ui-btn-right big"></a>
+		</div>
+		<div data-role="content" id="offerPageContent">
+			<p>
+				<div class="splash">
+					<p><b>Address:</b> 	10701 Centrum Parkway
+					Pineville,North Carolina 28134
+					<br>
+					<b>Phone:</b> <a href="tel:7045402013">704.540.2013</a>
+				</p>
+					<p>
+					<b>Store Timings</b>
+				</p>
+					<p>
+					<b>General Directions</b>
+					</p>
+					<p>
+							<b>Driving on I-77 South:</b><br/>
+							Take exit 1B for I-485 towards Huntersville/Pineville<br/>
+							Merge onto Interstate 485 Outer<br/>
+							Take exit 64B (N Carolina 51 S)<br/>
+							Turn right onto N Carolina 51 S/Pineville-Matthews Rd<br/>
+							Take the 1st right onto Centrum Parkway<br/>
+							Patel Grocery Store is on the right (next to Wells Fargo Bank)
+					</p>
+					<p>
+							<b>Driving on I-77 North:</b><br/>
+							Take exit 1 for I-485 E<br/>
+							Merge onto Interstate 485 Outer<br/>
+							Take exit 64B (N Carolina 51 S)<br/>
+							Turn right onto N Carolina 51 S/Pineville-Matthews Rd<br/>
+							Take the 1st right onto Centrum Parkway<br/>
+							Patel Grocery Store is on the right (next to Wells Fargo Bank)<br/>
+					</p>
+					<p>
+
+							<b>Driving on I-485 South/I-485 Inner:</b><br/>
+							Take exit 64B (N Carolina 51 S)<br/>
+							Merge onto N Carolina 51 S/Pineville-Matthews Rd<br/>
+							Turn right onto Centrum Parkway<br/>
+							Patel Grocery Store is on the right (next to Wells Fargo Bank)<br/>
+					</p>
+
+			</div>
+		
+		</div>
+				<div data-role="footer" data-id="footerId" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" id="btn_home" data-theme="a" data-role="button" data-transition="flip" data-icon="myhome" >Home</a></li>
+					<li><a href="#mapLocPage" id="btn_loc_id" data-theme="a" data-role="button" data-transition="flip" data-icon="navigation">Location</a></li>
+					<li><a href="#offerPage" id="btn_offer_id" data-theme="a" data-role="button" data-transition="flip" data-icon="offer">Offer</a></li>
+					<li><a href="#feedbackPage" id="btn_feedback_id" data-theme="a" data-role="button" data-transition="flip" data-icon="feedback">Feedback</a></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	
+	<!-- About Us page End -->
+	<!-- Settings Page Start -->
+	<div data-role="page" id="settings" data-theme="e">
+		
+		<div data-role="header">
+			<img border="0" src="images/ic_launcher-web.png" alt="Logo, Facebook" style="float:left;display:inline" width="50px" height="50px"/>
+			<h1>Patel Brothers</h1>
+			<a href="#settings" id="btn_setting" data-theme="a" data-icon="mysetting" class="ui-btn-right big"></a>
+		</div>
+		<div data-role="content" id="settingsContent">
+			<a href="#aboutUsPage" id="btn_about_id" data-theme="a" data-role="button" data-transition="flip">About Us</a>
+			<a href="#legalPage" id="btn_legal_id" data-theme="a" data-role="button" data-transition="flip">Legal</a>
+		</div>
+				<div data-role="footer" data-id="footerId" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" id="btn_home" data-theme="a" data-role="button" data-transition="flip" data-icon="myhome" >Home</a></li>
+					<li><a href="#mapLocPage" id="btn_loc_id" data-theme="a" data-role="button" data-transition="flip" data-icon="navigation">Location</a></li>
+					<li><a href="#offerPage" id="btn_offer_id" data-theme="a" data-role="button" data-transition="flip" data-icon="offer">Offer</a></li>
+					<li><a href="#feedbackPage" id="btn_feedback_id" data-theme="a" data-role="button" data-transition="flip" data-icon="feedback">Feedback</a></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	<!-- Settings Page End -->
+	<!-- Legal Page Start -->
+	<div data-role="page" id="legalPage" data-theme="e">
+		<div data-role="header">
+			<img border="0" src="images/ic_launcher-web.png" alt="Logo, Facebook" style="float:left;display:inline" width="50px" height="50px"/>
+			<h1>Patel Brothers</h1>
+			<a href="#settings" id="btn_setting" data-theme="a" data-icon="mysetting" class="ui-btn-right big"></a>
+		</div>
+		<div data-role="content" id="settingsContent">
+			<div class="splash">
+				<h2>Terms and Conditions</h2>
+				<p><strong>Agreement between user and Patel Brothers.com</strong></p>
+<p>Welcome to Patel Brothers.com. The Patel Brothers.com website is comprised of various web pages operated by Patel Brothers. Patel Brothers.com is offered to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein (the "Terms"). Your use of Patel Brothers.com constitutes your agreement to all such Terms. Please read these terms carefully, and keep a copy of them for your reference.</p>
+<p>Patel Brothers.com is a E-commerce Site, and online Indian Food Grocery.</p>
+<p><strong>Electronic Communications</strong></p>
+<p>Visiting Patel Brothers.com or sending emails to Patel Brothers.com constitutes electronic communications. You consent to receive electronic communications and you agree that all agreements, notices, disclosures and other communications that we provide to you electronically, via email and on the Site, satisfy any legal requirement that such communications be in writing.</p>
+<p>Patel Brothers.com does not knowingly collect, either online or offline, personal information from persons under the age of thirteen. If you are under 18, you may use Patel Brothers.com only with permission of a parent or guardian.</p>
+<p><strong>Links to third party sites/Third party services</strong></p>
+<p>Patel Brothers.com may contain links to other websites ("Linked Sites"). The Linked Sites are not under the control of Patel Brothers.com Patel Brothers.com is not responsible for the contents of any Linked Site, including without limitation any link contained in a Linked Site, or any changes or updates to a Linked Site. Patel Brothers.com is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement by Patel Brothers.com of the site or any association with its operators.</p>
+<p>Certain services made available via Patel Brothers.com are delivered by third party sites and organizations. By using any product, service or functionality originating from the Patel Brothers.com domain, you hereby acknowledge and consent that Patel Brothers.com may share such information and data with any third party with whom Patel Brothers.com has a contractual relationship to provide the requested product, service or functionality on behalf of Patel Brothers.com users and customers.</p>
+<p><strong>No unlawful or prohibited use/Intellectual Property</strong></p>
+<p>You are granted a non-exclusive, non-transferable, revocable license to access and use Patel Brothers.com strictly in accordance with these terms of use. As a condition of your use of the Site, you warrant to Patel Brothers.com that you will not use the Site for any purpose that is unlawful or prohibited by these Terms. You may not use the Site in any manner which could damage, disable, overburden, or impair the Site or interfere with any other party's use and enjoyment of the Site. You may not obtain or attempt to obtain any materials or information through any means not intentionally made available or provided for through the Site.</p>
+<p>All content included as part of the Service, such as text, graphics, logos, images, as well as the compilation thereof, and any software used on the Site, is the property of Patel Brothers.com or its suppliers and protected by copyright and other laws that protect intellectual property and proprietary rights. You agree to observe and abide by all copyright and other proprietary notices, legends or other restrictions contained in any such content and will not make any changes thereto.</p>
+<p>You will not modify, publish, transmit, reverse engineer, participate in the transfer or sale, create derivative works, or in any way exploit any of the content, in whole or in part, found on the Site. Patel Brothers.com content is not for resale. Your use of the Site does not entitle you to make any unauthorized use of any protected content, and in particular you will not delete or alter any proprietary rights or attribution notices in any content. You will use protected content solely for your personal use, and will make no other use of the content without the express written permission of Patel Brothers.com and the copyright owner. You agree that you do not acquire any ownership rights in any protected content. We do not grant you any licenses, express or implied, to the intellectual property of Patel Brothers.com or our licensors except as expressly authorized by these Terms.</p>
+<p><strong>International Users </strong></p>
+<p>The Service is controlled, operated and administered by Patel Brothers.com from our offices within the USA. If you access the Service from a location outside the USA, you are responsible for compliance with all local laws. You agree that you will not use the Patel Brothers.com Content accessed through Patel Brothers.com in any country or in any manner prohibited by any applicable laws, restrictions or regulations.</p>
+<p><strong>Indemnification </strong></p>
+<p>You agree to indemnify, defend and hold harmless Patel Brothers.com, its officers, directors, employees, agents and third parties, for any losses, costs, liabilities and expenses (including reasonable attorneys' fees) relating to or arising out of your use of or inability to use the Site or services, any user postings made by you, your violation of any terms of this Agreement or your violation of any rights of a third party, or your violation of any applicable laws, rules or regulations. Patel Brothers.com reserves the right, at its own cost, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which event you will fully cooperate with Patel Brothers.com in asserting any available defenses.</p>
+<p><strong>Liability disclaimer</strong></p>
+<p>THE INFORMATION, SOFTWARE, PRODUCTS, AND SERVICES INCLUDED IN OR AVAILABLE THROUGH THE SITE MAY INCLUDE INACCURACIES OR TYPOGRAPHICAL ERRORS. CHANGES ARE PERIODICALLY ADDED TO THE INFORMATION HEREIN. PATEL BROTHERS AND/OR ITS SUPPLIERS MAY MAKE IMPROVEMENTS AND/OR CHANGES IN THE SITE AT ANY TIME.</p>
+<p>PATEL BROTHERS AND/OR ITS SUPPLIERS MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY, RELIABILITY, AVAILABILITY, TIMELINESS, AND ACCURACY OF THE INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS CONTAINED ON THE SITE FOR ANY PURPOSE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ALL SUCH INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS ARE PROVIDED "AS IS" WITHOUT WARRANTY OR CONDITION OF ANY KIND. PATEL BROTHERS AND/OR ITS SUPPLIERS HEREBY DISCLAIM ALL WARRANTIES AND CONDITIONS WITH REGARD TO THIS INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS, INCLUDING ALL IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT.</p>
+<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL PATEL BROTHERS AND/OR ITS SUPPLIERS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF USE, DATA OR PROFITS, ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OR PERFORMANCE OF THE SITE, WITH THE DELAY OR INABILITY TO USE THE SITE OR RELATED SERVICES, THE PROVISION OF OR FAILURE TO PROVIDE SERVICES, OR FOR ANY INFORMATION, SOFTWARE, PRODUCTS, SERVICES AND RELATED GRAPHICS OBTAINED THROUGH THE SITE, OR OTHERWISE ARISING OUT OF THE USE OF THE SITE, WHETHER BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE, EVEN IF PATEL BROTHERS OR ANY OF ITS SUPPLIERS HAS BEEN ADVISED OF THE POSSIBILITY OF DAMAGES. BECAUSE SOME STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU. IF YOU ARE DISSATISFIED WITH ANY PORTION OF THE SITE, OR WITH ANY OF THESE TERMS OF USE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE SITE.</p>
+<p><strong>Termination/access restriction</strong></p>
+<p>Patel Brothers.com reserves the right, in its sole discretion, to terminate your access to the Site and the related services or any portion thereof at any time, without notice. To the maximum extent permitted by law, this agreement is governed by the laws of the State of Illinois and you hereby consent to the exclusive jurisdiction and venue of courts in Illinois in all disputes arising out of or relating to the use of the Site. Use of the Site is unauthorized in any jurisdiction that does not give effect to all provisions of these Terms, including, without limitation, this section.</p>
+<p>You agree that no joint venture, partnership, employment, or agency relationship exists between you and Patel Brothers.com as a result of this agreement or use of the Site. Patel Brothers.com's performance of this agreement is subject to existing laws and legal process, and nothing contained in this agreement is in derogation of Patel Brothers.com's right to comply with governmental, court and law enforcement requests or requirements relating to your use of the Site or information provided to or gathered by Patel Brothers.com with respect to such use. If any part of this agreement is determined to be invalid or unenforceable pursuant to applicable law including, but not limited to, the warranty disclaimers and liability limitations set forth above, then the invalid or unenforceable provision will be deemed superseded by a valid, enforceable provision that most closely matches the intent of the original provision and the remainder of the agreement shall continue in effect.</p>
+<p>Unless otherwise specified herein, this agreement constitutes the entire agreement between the user and Patel Brothers.com with respect to the Site and it supersedes all prior or contemporaneous communications and proposals, whether electronic, oral or written, between the user and Patel Brothers.com with respect to the Site. A printed version of this agreement and of any notice given in electronic form shall be admissible in judicial or administrative proceedings based upon or relating to this agreement to the same extent an d subject to the same conditions as other business documents and records originally generated and maintained in printed form. It is the express wish to the parties that this agreement and all related documents be written in English.</p>
+<p><strong>Changes to Terms</strong></p>
+<p>Patel Brothers.com reserves the right, in its sole discretion, to change the Terms under which Patel Brothers.com is offered. The most current version of the Terms will supersede all previous versions. Patel Brothers.com encourages you to periodically review the Terms to stay informed of our updates.</p>
+<p><strong>Contact Us</strong></p>
+<p>Patel Brothers.com welcomes your questions or comments regarding the Terms:</p>
+Patel Brothers <br /> 2610 W. DEVON AVENUE <br /> CHICAGO, IL 60659<br /><br /> Telephone number: <br /> 773.262.7777 <br /><br /> Effective as of October 1, 2011
+	
+			</div>
+		</div>
+				<div data-role="footer" data-id="footerId" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" id="btn_home" data-theme="a" data-role="button" data-transition="flip" data-icon="myhome" >Home</a></li>
+					<li><a href="#mapLocPage" id="btn_loc_id" data-theme="a" data-role="button" data-transition="flip" data-icon="navigation">Location</a></li>
+					<li><a href="#offerPage" id="btn_offer_id" data-theme="a" data-role="button" data-transition="flip" data-icon="offer">Offer</a></li>
+					<li><a href="#feedbackPage" id="btn_feedback_id" data-theme="a" data-role="button" data-transition="flip" data-icon="feedback">Feedback</a></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
+	<!-- Legal Page End -->
+	
+	<!-- FeedBack Page Start -->
+	<div data-role="page" id="feedbackPage" data-theme="e">
+		<div data-role="header">
+			<img border="0" src="images/ic_launcher-web.png" alt="Logo, Facebook" style="float:left;display:inline" width="50px" height="50px"/>
+			<h1>Patel Brothers</h1>
+			<a href="#settings" id="btn_setting" data-theme="a" data-icon="mysetting" class="ui-btn-right big"></a>
+		</div>
+		<div data-role="content" id="feedbackPageContent">
+			<label for="feedbackLabel" id="feedbackLabelId">FeedBack:</label>
+			<textarea name="textarea" id="feedbackTextArea"></textarea>
+			<div id="feedbackStatusId" style="display:none;visiility:false"><label for="feedbackStatus">Feedback sent ....</label></div>
+			<input type="submit" value="Submit Button" id="feedbackButtonId"/>
+		</div>
+				<div data-role="footer" data-id="footerId" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" id="btn_home" data-theme="a" data-role="button" data-transition="flip" data-icon="myhome" >Home</a></li>
+					<li><a href="#mapLocPage" id="btn_loc_id" data-theme="a" data-role="button" data-transition="flip" data-icon="navigation">Location</a></li>
+					<li><a href="#offerPage" id="btn_offer_id" data-theme="a" data-role="button" data-transition="flip" data-icon="offer">Offer</a></li>
+					<li><a href="#feedbackPage" id="btn_feedback_id" data-theme="a" data-role="button" data-transition="flip" data-icon="feedback">Feedback</a></li>
+					
+				</ul>
+			</div>
+		</div>	
+	</div>
+	<!-- FeedBack Page End -->
+
+</body>
+</html>
